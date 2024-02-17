@@ -1,0 +1,21 @@
+.settings {
+    width: 393px;
+}
+
+.settings__main {
+    padding-top: 34px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.settings__main-title {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.dvd {
+    width: 100%;
+    border-top: 1px solid #E9E8EB;
+}

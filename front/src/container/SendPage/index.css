@@ -1,0 +1,11 @@
+.send {
+    width: 393px;
+}
+
+.send__main {
+    padding-top: 34px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

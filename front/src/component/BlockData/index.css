@@ -1,0 +1,68 @@
+.block-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+    transition: opacity 0.7s;
+
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.block-data:hover {
+    opacity: 0.7;
+}
+
+.block-data__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.block-data__info-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.erunda {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1D1D1F;
+    line-height: 16px;
+}
+
+.datetype {
+    font-size: 12px;
+    font-weight: 400;
+    color: #939199;
+    line-height: 12px;
+}
+
+.block-data__summ {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+}
+
+.block-data__summ--cent {
+    font-weight: 400;
+}
+
+.trunc-recive {
+    color: #24B277;
+}
+
+.fraction-recive {
+    color: #26BF80;
+}
+
+.trunc-send {
+    color: #1D1D1F;
+}
+
+.fraction-send {
+    color: #939199;
+}

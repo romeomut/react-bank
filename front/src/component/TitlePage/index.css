@@ -1,0 +1,20 @@
+.title-page {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 28px;
+}
+
+.title-page__title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #121212;
+}
+
+.title-page__subtitle {
+    font-size: 14px;
+    color: #939199;
+    font-weight: 400;
+}
