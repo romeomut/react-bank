@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 //
 
-import { LOAD_STATUS, REG_EXP_PASSWORD, FIELD_ERROR } from '../Load'
+import { LOAD_STATUS, FIELD_ERROR } from '../Load'
 
 // 
 
@@ -47,11 +47,11 @@ export default function FieldPassword({ label, placeholder, onChange }) {
         <div className="form__item">
 
             <div className="field field--password">
-                <label className="field__label">{label}</label>
+                <label className={`field__label ${status === LOAD_STATUS.ERROR ? 'field__label--error' : ''}`}>{label}</label>
 
                 <div className="field__wrapper">
-                    <input type={`${show ? "text" : "password"}`} className="field__input validation" placeholder={placeholder} autoComplete="current-password" onChange={handleChange} required />
-                    <span className={`field__icon ${show ? "field__icon--show" : "field__icon--hide"}`} onClick={handleChangeIcon}></span>
+                    <input type={`${show ? "text" : "password"}`} className={`field__input validation ${status === LOAD_STATUS.ERROR ? 'validation--active' : ''}`} placeholder={placeholder} autoComplete="current-password" onChange={handleChange} required />
+                    <span className={`field__icon ${show ? (status === LOAD_STATUS.ERROR ? 'field__icon--show-error' : 'field__icon--show') : (status === LOAD_STATUS.ERROR ? 'field__icon--hide-error' : 'field__icon--hide')}`} onClick={handleChangeIcon}></span>
                 </div>
 
                 {(status === LOAD_STATUS.ERROR) && (
@@ -61,3 +61,4 @@ export default function FieldPassword({ label, placeholder, onChange }) {
         </div>
     )
 }
+

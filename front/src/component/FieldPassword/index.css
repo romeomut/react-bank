@@ -4,12 +4,35 @@
     position: relative;
 }
 
-.field--password .field__icon--hide {
+.field--password .field__icon--hide,
+.field--password .field__icon--hide-error {
     display: block;
     height: 20px;
     width: 22px;
+    position: absolute;
+    right: 16px;
+    top: calc(50% - 10px);
+
+    cursor: pointer;
+    transition: opacity 0.7s;
+}
+
+.field--password .field__icon--hide {
     background-image: url('./password-hide.svg');
     background-size: cover;
+}
+
+.field--password .field__icon--hide-error {
+    background-image: url('./password-hide-error.svg');
+    background-size: cover;
+}
+
+.field--password .field__icon--show,
+.field--password .field__icon--show-error {
+    display: block;
+    height: 20px;
+    width: 22px;
+
     position: absolute;
     right: 16px;
     top: calc(50% - 10px);
@@ -19,17 +42,13 @@
 }
 
 .field--password .field__icon--show {
-    display: block;
-    height: 20px;
-    width: 22px;
     background-image: url('./password-show.svg');
     background-size: cover;
-    position: absolute;
-    right: 16px;
-    top: calc(50% - 10px);
+}
 
-    cursor: pointer;
-    transition: opacity 0.7s;
+.field--password .field__icon--show-error {
+    background-image: url('./password-show-error.svg');
+    background-size: cover;
 }
 
 .field--password .field__icon:hover {

@@ -62,12 +62,12 @@ export default function Field({ label, placeholder, type, onChange, value }) {
             <div className="field">
 
                 {label && (
-                    <label className="field__label">{label}</label>
+                    <label className={`field__label ${status === LOAD_STATUS.ERROR ? 'field__label--error' : ''}`}>{label}</label>
                 )}
 
-                {!value && (<input className="field__input validation" placeholder={placeholder} type={type} autoComplete={label} onChange={handleChange} required />)}
+                {!value && (<input className={`field__input validation ${status === LOAD_STATUS.ERROR ? 'validation--active' : ''}`} placeholder={placeholder} type={type} autoComplete={label} onChange={handleChange} required />)}
 
-                {value && (<input className="field__input validation" placeholder={placeholder} type={type} autoComplete={label} onChange={handleChange} onMouseLeave={handleOnMouseLeave} required value={inputValue} min={1} />)}
+                {value && (<input className={`field__input validation ${status === LOAD_STATUS.ERROR ? 'validation--active' : ''}`} placeholder={placeholder} type={type} autoComplete={label} onChange={handleChange} onMouseLeave={handleOnMouseLeave} required value={inputValue} min={1} />)}
 
             </div>
 

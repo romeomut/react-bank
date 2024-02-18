@@ -103,6 +103,11 @@ body {
   color: #1D1D1F;
 }
 
+.field__label--error {
+  color: red !important;
+  ;
+}
+
 .field__input {
   border: 1px solid #E9E8EB;
   /* background-color: s.color('box'); */
