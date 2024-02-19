@@ -49,7 +49,6 @@ export default function SignupPage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
                 localStorage.setItem(SESSION_KEY, JSON.stringify(data.session))
@@ -70,12 +69,10 @@ export default function SignupPage() {
 
     const handleChangeEmail = (value) => {
         setEmail(value)
-        console.log(value);
     }
 
     const handleChangePassword = (value) => {
         setPassword(value)
-        console.log(value);
     }
 
     //

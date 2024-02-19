@@ -46,14 +46,12 @@ export default function SettingsPage() {
         setEmail(value)
         //
         setStatus(null)
-        console.log(value);
     }
 
     const handleChangePassword = (value) => {
         setPassword(value)
         //
         setStatus(null)
-        console.log(value);
     }
 
     //
@@ -62,14 +60,12 @@ export default function SettingsPage() {
         setOldPassword(value)
         //
         setStatus2(null)
-        console.log(value);
     }
 
     const handleChangeNewPassword = (value) => {
         setNewPassword(value)
         //
         setStatus2(null)
-        console.log(value);
     }
 
     const handleSubmitChangeEmail = async (e) => {
@@ -92,15 +88,9 @@ export default function SettingsPage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
                 localStorage.setItem(SESSION_KEY, JSON.stringify(data.session))
-                console.log(data);
-
-
-
-
 
                 setMessage(data.message)
                 setStatus(LOAD_STATUS.SUCCESS)
@@ -136,11 +126,9 @@ export default function SettingsPage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
                 localStorage.setItem(SESSION_KEY, JSON.stringify(data.session))
-                console.log(data);
 
                 setMessage2(data.message)
                 setStatus2(LOAD_STATUS.SUCCESS)

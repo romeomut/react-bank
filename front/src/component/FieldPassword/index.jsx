@@ -27,8 +27,6 @@ export default function FieldPassword({ label, placeholder, onChange }) {
 
     const handleChange = (e) => {
 
-        console.log(String(e.target.value).length)
-
         if (String(e.target.value).length < 1) {
             setStatus(LOAD_STATUS.ERROR)
             setMessage(FIELD_ERROR.IS_EMPTY)

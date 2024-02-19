@@ -34,13 +34,10 @@ export default function RecivePage() {
 
     const handleChangeSum = (value) => {
         setSum(Number(value))
-        //
-        console.log(value);
     }
 
     const handleClick = (value) => {
         setTypeSystem(value)
-        console.log(value);
     }
 
     //
@@ -56,8 +53,6 @@ export default function RecivePage() {
             navigate('/signin')
         }
 
-        console.log({ typeSystem, sum, token });
-
         try {
             const res = await fetch('http://localhost:4000/recive', {
                 method: 'POST',
@@ -67,11 +62,8 @@ export default function RecivePage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
-
-                console.log(data);
 
                 setMessage(data.message)
                 setStatus(LOAD_STATUS.SUCCESS)

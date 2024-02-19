@@ -39,12 +39,9 @@ export default function TransactionPage() {
             const res = await fetch(`http://localhost:4000/transaction/${id}/${token}`, { method: 'GET', })
 
             const data = await res.json()
-            console.log(data)
-            console.log(res.ok)
 
             if (res.ok) {
                 setData(data)
-                console.log(data);
 
             } else {
                 console.log(data.message);

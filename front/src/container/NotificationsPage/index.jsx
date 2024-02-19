@@ -49,7 +49,6 @@ export default function NotificationsPage() {
             const res = await fetch(`http://localhost:4000/notifications/${token}`, { method: 'GET', })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
                 setDt(data.data.reverse())
@@ -79,11 +78,9 @@ export default function NotificationsPage() {
         let m2 = new Date(currDate).getMinutes()
 
         if (hh1 === hh2) {
-            // console.log(m2 - m1);
             const time = m2 - m1
             return `${time} min ago`
         } else if (dd1 === dd2) {
-            // console.log(hh2 - hh1);
             const time = hh2 - hh1
             return `${time} hours ago`
         } else {

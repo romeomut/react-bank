@@ -31,7 +31,6 @@ export default function RecoveryPage() {
 
     const handleChange = (value) => {
         setEmail(value)
-        console.log(value);
     }
 
     //
@@ -58,7 +57,6 @@ export default function RecoveryPage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
                 navigate('/recovery-confirm')

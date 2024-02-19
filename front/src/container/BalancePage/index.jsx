@@ -73,12 +73,9 @@ export default function BalancePage() {
             const res = await fetch(`http://localhost:4000/balance/${token}`, { method: 'GET', })
 
             const data = await res.json()
-            console.log(data)
-            console.log(res.ok)
 
             if (res.ok) {
                 setDat(data.data.listTransaction.reverse())
-                console.log(data.data);
 
                 const vTrunc = Math.trunc(data.data.balance)
                 const vFractions = Math.trunc(((data.data.balance - vTrunc) * 100).toFixed(2))

@@ -33,7 +33,6 @@ export default function SignupConfirmPage() {
 
     const handleChange = (value) => {
         setCode(Number(value))
-        console.log(value);
     }
 
     //
@@ -64,7 +63,6 @@ export default function SignupConfirmPage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
                 localStorage.setItem(SESSION_KEY, JSON.stringify(data.session))

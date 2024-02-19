@@ -48,8 +48,6 @@ export default function Field({ label, placeholder, type, onChange, value }) {
         if (e.target.value === '.') {
             setInputValue('')
         } else {
-            console.log('handleOnMouseLeave', e.target.value);
-            console.log('handleOnMouseLeave', typeof e.target.value);
             setInputValue(Number(e.target.value).toFixed(2))
         }
     }

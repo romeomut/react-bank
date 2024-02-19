@@ -33,12 +33,11 @@ export default function SendPage() {
 
     const handleChange = (value) => {
         setEmail(value)
-        console.log(value);
+
     }
 
     const handleChangeSum = (value) => {
         setSum(Number(value))
-        console.log(value);
     }
 
     const handleSubmitSum = async (e) => {
@@ -52,8 +51,6 @@ export default function SendPage() {
             navigate('/signin')
         }
 
-        console.log({ email, sum, token });
-
         try {
             const res = await fetch('http://localhost:4000/send', {
                 method: 'POST',
@@ -63,11 +60,8 @@ export default function SendPage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
-
-                console.log(data);
 
                 setMessage(data.message)
                 setStatus(LOAD_STATUS.SUCCESS)

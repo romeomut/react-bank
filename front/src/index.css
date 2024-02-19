@@ -111,7 +111,7 @@ body {
 .field__input {
   border: 1px solid #E9E8EB;
   /* background-color: s.color('box'); */
-  padding: 20px 16px;
+  padding: 16px;
   border-radius: 10px;
   font-size: 14px;
 }

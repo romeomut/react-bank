@@ -35,12 +35,10 @@ export default function RecoveryConfirmPage() {
 
     const handleChangeCode = (value) => {
         setCode(value)
-        console.log(value);
     }
 
     const handleChangePassword = (value) => {
         setPassword(value)
-        console.log(value);
     }
 
     //
@@ -61,7 +59,6 @@ export default function RecoveryConfirmPage() {
             })
 
             const data = await res.json()
-            console.log(data)
 
             if (res.ok) {
                 localStorage.setItem(SESSION_KEY, JSON.stringify(data.session))
